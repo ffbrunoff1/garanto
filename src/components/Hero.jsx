@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Shield, Target, Banknote, Wallet } from 'lucide-react'
+import { Shield, Target, Banknote, Wallet, ArrowUp } from 'lucide-react'
 
 export default function Hero() {
   const scrollToSection = (sectionId) => {
@@ -59,9 +59,8 @@ export default function Hero() {
             >
               Suas{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-accent-300">
-                Soluções
-              </span>{' '}
-              Financeiras
+                clareza, segurança e estratégia.
+              </span>
             </motion.h1>
             
             <motion.p
@@ -70,8 +69,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl lg:text-2xl text-primary-100 mb-8 leading-relaxed"
             >
-              Transforme sua relação com o dinheiro. Na Garanto, oferecemos soluções financeiras 
-              personalizadas que se adaptam ao seu perfil e objetivos únicos.
+              A Garanto ajuda você a tomar decisões financeiras inteligentes, com consórcios, crédito e seguros sob medida para você, sua família ou sua empresa.
             </motion.p>
 
             <motion.div
@@ -86,34 +84,8 @@ export default function Hero() {
                 onClick={() => scrollToSection('contact')}
                 className="btn-outline flex items-center justify-center space-x-2 text-lg px-10 py-4"
               >
-                <span>Comece Agora</span>
-                <Shield className="w-5 h-5" />
+                <span>⬆️ Quero meu Diagnóstico Personalizado</span>
               </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection('about')}
-                className="border-2 border-transparent text-white px-10 py-4 rounded-lg font-semibold transition-all duration-300 hover:border-white hover:bg-white hover:bg-opacity-10 text-lg"
-              >
-                Saiba Mais
-              </motion.button>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="grid grid-cols-2 gap-6"
-            >
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">10+</div>
-                <div className="text-primary-200 text-sm">Anos de Experiência</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">500+</div>
-                <div className="text-primary-200 text-sm">Clientes Satisfeitos</div>
-              </div>
             </motion.div>
           </motion.div>
 

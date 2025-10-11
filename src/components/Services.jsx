@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Shield, Target, Banknote, Wallet, Clock, Star } from 'lucide-react'
+import { Home, Building, CreditCard, Shield, TrendingUp, Phone, Mail, Navigation, Clock, Star, User, Briefcase } from 'lucide-react'
 
 export default function Services() {
   const scrollToSection = (sectionId) => {
@@ -118,126 +118,222 @@ export default function Services() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Nossas{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">
-              Soluções
-            </span>
+            Soluções financeiras completas, seguras e sob medida para cada objetivo.
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Oferecemos um portfólio completo de soluções financeiras personalizadas 
-            para atender suas necessidades específicas e alcançar seus objetivos.
+            Da pessoa física à empresa, a Garanto entrega clareza, estratégia e resultados reais.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {services.map((service, index) => {
-            const IconComponent = service.icon
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 relative overflow-hidden"
-              >
-                <div className="absolute top-4 right-4">
-                  <span className="bg-gradient-to-r from-accent-500 to-accent-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                    {service.highlight}
-                  </span>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            whileHover={{ y: -10, scale: 1.02 }}
+            className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 relative overflow-hidden"
+          >
+            <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6">
+              <Home className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Crédito com Garantia de Imóvel
+            </h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Levante capital sem vender seu patrimônio. Uma solução inteligente para quem precisa de recursos para capital de giro, expansão ou reorganização financeira.
+            </p>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
                 </div>
-
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6">
-                  <IconComponent className="w-8 h-8 text-white" />
+                Ideal para empresários e autônomos
+              </li>
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
                 </div>
+                Taxas reduzidas e prazos longos
+              </li>
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Sem precisar se desfazer do bem
+              </li>
+            </ul>
+          </motion.div>
 
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {service.title}
-                </h3>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            whileHover={{ y: -10, scale: 1.02 }}
+            className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 relative overflow-hidden"
+          >
+            <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6">
+              <Building className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Crédito Imobiliário
+            </h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Consultoria completa para aquisição de imóveis. A Garanto negocia com os principais bancos do país para encontrar as melhores condições e taxas do mercado.
+            </p>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Comparativo entre instituições
+              </li>
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Simulações reais e personalizadas
+              </li>
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Acompanhamento até a liberação do crédito
+              </li>
+            </ul>
+          </motion.div>
 
-                <ul className="space-y-3 mb-8">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                      </div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            whileHover={{ y: -10, scale: 1.02 }}
+            className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 relative overflow-hidden"
+          >
+            <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6">
+              <CreditCard className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Consórcio Estruturado
+            </h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Planejamento estratégico para quem quer comprar imóveis, veículos, máquinas ou investir, sem juros e com segurança.
+            </p>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Estratégia de lances e contemplação
+              </li>
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Grupos ativos e cartas contempladas
+              </li>
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Solução ideal para quem quer planejar com inteligência
+              </li>
+            </ul>
+          </motion.div>
 
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => scrollToSection('contact')}
-                  className="w-full bg-gradient-to-r from-primary-500 to-accent-600 text-white py-3 rounded-lg font-semibold hover:from-primary-600 hover:to-accent-700 transition-all duration-300"
-                >
-                  Saiba Mais
-                </motion.button>
-              </motion.div>
-            )
-          })}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            whileHover={{ y: -10, scale: 1.02 }}
+            className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 relative overflow-hidden"
+          >
+            <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6">
+              <Shield className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Seguros Personalizados
+            </h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Proteja o que realmente importa com soluções sob medida para pessoas e empresas.
+            </p>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Seguro de Vida Individual e em Grupo
+              </li>
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Seguro Saúde Empresarial (Bradesco Saúde)
+              </li>
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Seguro de Máquinas, Frota e Empresarial
+              </li>
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Seguro RC Profissional e Seguro Garantia
+              </li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            whileHover={{ y: -10, scale: 1.02 }}
+            className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 relative overflow-hidden"
+          >
+            <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6">
+              <TrendingUp className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Mentorias Financeiras
+            </h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Aprenda a usar o dinheiro e o crédito como ferramentas de crescimento. Raíza Brito conduz mentorias práticas e personalizadas para diferentes perfis.
+            </p>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Mentoria Profissional – para quem quer atuar no mercado financeiro
+              </li>
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Mentoria Pessoa Física – para reorganizar a vida financeira
+              </li>
+              <li className="flex items-center text-gray-300">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                Mentoria Empresarial – diagnóstico financeiro completo
+              </li>
+            </ul>
+          </motion.div>
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mt-16"
         >
-          <h3 className="text-3xl font-bold text-white mb-6">
-            Como Funciona Nosso Processo
-          </h3>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Seguimos uma metodologia estruturada para garantir os melhores resultados 
-            em cada etapa da sua jornada financeira.
+          <p className="text-xl font-semibold text-gray-300 mb-6">
+            📲 Quer entender qual dessas soluções é ideal para você?
           </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {processSteps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="text-center relative"
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-accent-500 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
-                {step.number}
-              </div>
-              
-              <h4 className="text-xl font-bold text-white mb-4">
-                {step.title}
-              </h4>
-              
-              <p className="text-gray-300 leading-relaxed">
-                {step.description}
-              </p>
-
-              {index < processSteps.length - 1 && (
-                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-accent-500 to-transparent"></div>
-              )}
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl p-12 text-center"
-        >
-          <h3 className="text-3xl font-bold text-white mb-6">
-            Pronto para Transformar sua Vida Financeira?
-          </h3>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Entre em contato conosco e descubra como nossas soluções podem 
-            ajudá-lo a alcançar seus objetivos financeiros.
+          <p className="text-2xl font-bold text-white mb-8">
+            👉 Clique abaixo e agende seu Diagnóstico Personalizado.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -245,7 +341,7 @@ export default function Services() {
             onClick={() => scrollToSection('contact')}
             className="bg-white text-primary-600 px-12 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300"
           >
-            Agendar Consulta Gratuita
+            🔘 Quero meu Diagnóstico
           </motion.button>
         </motion.div>
       </div>

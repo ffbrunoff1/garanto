@@ -24,9 +24,13 @@ export default function Header() {
 
   const menuItems = [
     { label: 'Início', id: 'hero' },
-    { label: 'Sobre', id: 'about' },
-    { label: 'Soluções', id: 'services' },
-    { label: 'Contato', id: 'contact' }
+    { label: 'O Problema', id: 'problem' },
+    { label: 'A Solução', id: 'solution' },
+    { label: 'Para Quem', id: 'for-who' },
+    { label: 'Como Funciona', id: 'how-it-works' },
+    { label: 'Depoimentos', id: 'testimonials' },
+    { label: 'Quem Somos', id: 'about' },
+    { label: 'Serviços', id: 'services' }
   ]
 
   return (
@@ -76,14 +80,14 @@ export default function Header() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('final-cta')}
               className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 ${
                 isScrolled 
                   ? 'bg-primary-600 text-white hover:bg-primary-700' 
                   : 'bg-white text-primary-600 hover:bg-gray-100'
               }`}
             >
-              Fale Conosco
+              Quero meu Diagnóstico
             </motion.button>
           </nav>
 
@@ -128,10 +132,10 @@ export default function Header() {
               ))}
               <motion.button
                 whileHover={{ scale: 1.02 }}
-                onClick={() => scrollToSection('contact')}
+                onClick={() => scrollToSection('final-cta')}
                 className="w-full bg-primary-600 text-white py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-300"
               >
-                Fale Conosco
+                Quero meu Diagnóstico
               </motion.button>
             </div>
           </motion.div>

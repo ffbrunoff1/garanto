@@ -14,18 +14,21 @@ export default function Footer() {
 
   const quickLinks = [
     { label: 'Início', id: 'hero' },
-    { label: 'Sobre', id: 'about' },
-    { label: 'Soluções', id: 'services' },
-    { label: 'Contato', id: 'contact' }
+    { label: 'O Problema', id: 'problem' },
+    { label: 'A Solução', id: 'solution' },
+    { label: 'Para Quem', id: 'for-who' },
+    { label: 'Como Funciona', id: 'how-it-works' },
+    { label: 'Depoimentos', id: 'testimonials' },
+    { label: 'Quem Somos', id: 'about' },
+    { label: 'Serviços', id: 'services' }
   ]
 
   const services = [
-    'Consultoria Financeira',
-    'Proteção Patrimonial',
-    'Gestão de Investimentos',
-    'Planejamento de Aposentadoria',
-    'Educação Financeira',
-    'Consultoria Empresarial'
+    'Crédito com Garantia de Imóvel',
+    'Crédito Imobiliário',
+    'Consórcio Estruturado',
+    'Seguros Personalizados',
+    'Mentorias Financeiras'
   ]
 
   const contactInfo = [
