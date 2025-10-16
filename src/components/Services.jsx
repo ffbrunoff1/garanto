@@ -1,112 +1,14 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Home, Building, CreditCard, Shield, TrendingUp, Phone, Mail, Navigation, Clock, Star, User, Briefcase } from 'lucide-react'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Home, Building, CreditCard, Shield, TrendingUp, Banknote } from 'lucide-react';
 
 export default function Services() {
   const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId)
+    const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' })
+      section.scrollIntoView({ behavior: 'smooth' });
     }
-  }
-
-  const services = [
-    {
-      icon: Banknote,
-      title: "Consultoria Financeira",
-      description: "Análise completa da sua situação financeira atual e planejamento estratégico para alcançar seus objetivos de curto, médio e longo prazo.",
-      features: [
-        "Análise de perfil financeiro",
-        "Planejamento estratégico",
-        "Otimização de recursos",
-        "Acompanhamento mensal"
-      ],
-      highlight: "Mais Procurado"
-    },
-    {
-      icon: Shield,
-      title: "Proteção Patrimonial",
-      description: "Estratégias avançadas para proteger seu patrimônio contra riscos diversos, garantindo a segurança dos seus bens e investimentos.",
-      features: [
-        "Blindagem patrimonial",
-        "Seguros personalizados",
-        "Planejamento sucessório",
-        "Gestão de riscos"
-      ],
-      highlight: "Recomendado"
-    },
-    {
-      icon: Target,
-      title: "Gestão de Investimentos",
-      description: "Administração profissional dos seus investimentos com estratégias personalizadas baseadas no seu perfil de risco e objetivos financeiros.",
-      features: [
-        "Carteira diversificada",
-        "Análise de mercado",
-        "Rebalanceamento automático",
-        "Relatórios detalhados"
-      ],
-      highlight: "Premium"
-    },
-    {
-      icon: Wallet,
-      title: "Planejamento de Aposentadoria",
-      description: "Construção de um plano sólido para sua aposentadoria, garantindo que você mantenha seu padrão de vida no futuro.",
-      features: [
-        "Simulações personalizadas",
-        "Previdência privada",
-        "Investimentos de longo prazo",
-        "Revisões periódicas"
-      ],
-      highlight: "Futuro Garantido"
-    },
-    {
-      icon: Clock,
-      title: "Educação Financeira",
-      description: "Programa completo de educação financeira para desenvolver suas habilidades de gestão e tomada de decisões financeiras inteligentes.",
-      features: [
-        "Workshops exclusivos",
-        "Material didático",
-        "Mentoria individual",
-        "Comunidade de investidores"
-      ],
-      highlight: "Transformador"
-    },
-    {
-      icon: Star,
-      title: "Consultoria Empresarial",
-      description: "Soluções financeiras especializadas para empresas, incluindo gestão de fluxo de caixa, planejamento tributário e estruturação financeira.",
-      features: [
-        "Análise de fluxo de caixa",
-        "Planejamento tributário",
-        "Reestruturação financeira",
-        "Consultoria estratégica"
-      ],
-      highlight: "Para Empresas"
-    }
-  ]
-
-  const processSteps = [
-    {
-      number: "01",
-      title: "Análise Inicial",
-      description: "Realizamos uma avaliação completa da sua situação financeira atual"
-    },
-    {
-      number: "02",
-      title: "Planejamento",
-      description: "Desenvolvemos uma estratégia personalizada para seus objetivos"
-    },
-    {
-      number: "03",
-      title: "Implementação",
-      description: "Colocamos o plano em ação com acompanhamento profissional"
-    },
-    {
-      number: "04",
-      title: "Monitoramento",
-      description: "Acompanhamos constantemente e ajustamos quando necessário"
-    }
-  ]
+  };
 
   return (
     <section id="services" className="section-padding bg-gradient-to-br from-gray-900 via-primary-900 to-gray-900">
@@ -346,5 +248,5 @@ export default function Services() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

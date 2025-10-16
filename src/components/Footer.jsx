@@ -1,16 +1,16 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Phone, Mail, Navigation } from 'lucide-react'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Phone, Mail, Navigation } from 'lucide-react';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId)
+    const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' })
+      section.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+  };
 
   const quickLinks = [
     { label: 'Início', id: 'hero' },
@@ -21,7 +21,7 @@ export default function Footer() {
     { label: 'Depoimentos', id: 'testimonials' },
     { label: 'Quem Somos', id: 'about' },
     { label: 'Serviços', id: 'services' }
-  ]
+  ];
 
   const services = [
     'Crédito com Garantia de Imóvel',
@@ -29,7 +29,7 @@ export default function Footer() {
     'Consórcio Estruturado',
     'Seguros Personalizados',
     'Mentorias Financeiras'
-  ]
+  ];
 
   const contactInfo = [
     {
@@ -44,7 +44,7 @@ export default function Footer() {
       icon: Navigation,
       info: "Pelotas, RS"
     }
-  ]
+  ];
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-primary-900 to-gray-900 text-white pb-20">
@@ -134,7 +134,7 @@ export default function Footer() {
               </h3>
               <ul className="space-y-4">
                 {contactInfo.map((contact, index) => {
-                  const IconComponent = contact.icon
+                  const IconComponent = contact.icon;
                   return (
                     <li key={index} className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -144,7 +144,7 @@ export default function Footer() {
                         {contact.info}
                       </span>
                     </li>
-                  )
+                  );
                 })}
               </ul>
               
@@ -204,5 +204,5 @@ export default function Footer() {
         </motion.div>
       </div>
     </footer>
-  )
+  );
 }

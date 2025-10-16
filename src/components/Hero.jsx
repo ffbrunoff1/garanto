@@ -1,14 +1,14 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Shield, Target, Banknote, Wallet, ArrowUp } from 'lucide-react'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Shield, Target, Banknote, Wallet, ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId)
+    const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' })
+      section.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+  };
 
   const benefits = [
     {
@@ -31,7 +31,7 @@ export default function Hero() {
       title: "Gestão Completa",
       description: "Soluções integradas para toda sua vida financeira"
     }
-  ]
+  ];
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 overflow-hidden">
@@ -84,7 +84,8 @@ export default function Hero() {
                 onClick={() => scrollToSection('contact')}
                 className="btn-outline flex items-center justify-center space-x-2 text-lg px-10 py-4"
               >
-                <span>⬆️ Quero meu Diagnóstico Personalizado</span>
+                <ArrowRight className="w-5 h-5" />
+                <span>Quero meu Diagnóstico Personalizado</span>
               </motion.button>
             </motion.div>
           </motion.div>
@@ -96,7 +97,7 @@ export default function Hero() {
             className="grid grid-cols-2 gap-6"
           >
             {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon
+              const IconComponent = benefit.icon;
               return (
                 <motion.div
                   key={index}
@@ -112,7 +113,7 @@ export default function Hero() {
                   <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
                   <p className="text-primary-100 text-sm leading-relaxed">{benefit.description}</p>
                 </motion.div>
-              )
+              );
             })}
           </motion.div>
         </div>
@@ -137,5 +138,5 @@ export default function Hero() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUp } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function FinalCTA() {
   const scrollToSection = (sectionId) => {
@@ -35,7 +35,7 @@ export default function FinalCTA() {
           onClick={() => scrollToSection('contact')}
           className="bg-white text-primary-600 px-12 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center mx-auto space-x-2"
         >
-          <ArrowUp className="w-5 h-5" />
+          <ArrowRight className="w-5 h-5" />
           <span>Sim, quero clareza financeira</span>
         </motion.button>
       </div>

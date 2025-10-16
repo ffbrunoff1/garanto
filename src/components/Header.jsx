@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+      setIsScrolled(window.scrollY > 50);
+    };
     
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId)
+    const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' })
+      section.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMobileMenuOpen(false)
-  }
+    setIsMobileMenuOpen(false);
+  };
 
   const menuItems = [
     { label: 'Início', id: 'hero' },
@@ -31,7 +31,7 @@ export default function Header() {
     { label: 'Depoimentos', id: 'testimonials' },
     { label: 'Quem Somos', id: 'about' },
     { label: 'Serviços', id: 'services' }
-  ]
+  ];
 
   return (
     <motion.header
@@ -142,5 +142,5 @@ export default function Header() {
         )}
       </div>
     </motion.header>
-  )
+  );
 }

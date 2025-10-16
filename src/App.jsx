@@ -10,6 +10,7 @@ import About from './components/About.jsx';
 import Services from './components/Services.jsx';
 import FinalCTA from './components/FinalCTA.jsx';
 import Footer from './components/Footer.jsx';
+import Contact from './components/Contact.jsx';
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
         <About />
         <Services />
         <FinalCTA />
+        <Contact />
       </main>
       <Footer />
     </div>
